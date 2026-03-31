@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', 'sans-serif';
+    background: radial-gradient(circle at left, rgba(0,0,0,0.6), transparent 40%),
+                radial-gradient(circle at right, rgba(0,0,0,0.6), transparent 40%),
+                linear-gradient(to right, #c40000 50%, #1b2e6b 50%);
+}
+
+/* Card */
+.card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 3px rgba(0,0,0,0.5);
+    pointer-events: none;
+
+}
+.card {
+    width: 80%;
+    max-width: 1200px;
+    height: 85vh;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    background: linear-gradient(to right, #142a63 50%, #c40000 50%);
+    box-shadow: 0 50px 120px rgba(0,0,0,0.7), inset 0 0  40px rgba(0,0,0,0.4);      
+}
+
+/* Vertical light -> dark overlay */
+.card::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.08),rgba(0,0,0,0.6));
+}
+
+/* Navigation */
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo img{
+    height: 50px;
+    width: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+.menu i{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.divider{
+    width: 1.5px;
+    height: 15px;
+    background: rgba(255,255,255,0.8);
+}
+
+/* Left Social Media Icons */
+.social{
+    position: absolute;
+    left: 66px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 5;
+}
+
+.social a{
+    color: white;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: 0.2s ease;
+
+}
+
+.social a:hover{
+    opacity: 1;
+    transform: translateY(-3px) scale(1.3);
+}
+
+/* Hero */
+.hero{
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.spidey{
+    position: absolute;
+    left: 46%;
+    transform: translateX(-50%);
+    /* Responsive Sizing */
+    height: clamp(350px, 85vh, 750px);
+    z-index: 3;
+    filter: drop-shadow(0 40px 50px rgba(0,0,0,0.6));
+    transition: 0.7s ease;
+}
+
+.spidey:hover{
+    transform: translate(50%,-270%) scale(1.5);
+}
+
+/* Text */
+.text{
+    position: relative;
+    z-index: 1;
+}
+
+.text h1{
+    font-weight: 90px;
+    letter-spacing: -3px;
+    color: #f2f2f2;
+    cursor: pointer;
+    opacity: 0.8;
+    /* Responsive Text */
+    font-size: clamp(48px, 8vw, 120px);
+    line-height: 0.9;
+}
+
+/* Side Arrows */
+.carousel-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 20;
+    transition: 0.2s ease;
+}
+
+/* Left Carousel (Red) */
+.carousel-arrow.left{
+    left: 10px;
+    background: #c40000;
+}
+/* Right Carousel (Blue) */
+.carousel-arrow.right{
+    right: 10px;
+    background: #142a63;
+}
+
+.carousel-arrow:hover{
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+
+/* Info Cards */
+.info-cards{
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    right: 60px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    gap: 40px;
+}
+
+.info-card{
+    cursor: pointer;
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    padding: 10px 18px;
+    background: rgba(45,45,45,0.35);
+    backdrop-filter: blur(2px);
+    border-radius: 14px;
+    transition: 0.3s ease;
+}
+
+.info-number{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.info-text h4{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.info-text p{
+    font-size: 12px;
+    opacity: 0.75;
+    line-height: 1.5;
+}
+
+.info-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
