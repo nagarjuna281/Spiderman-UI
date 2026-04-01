@@ -25,7 +25,6 @@ body {
     position: absolute;
     inset: 0;
     pointer-events: none;
-
 }
 .card {
     width: 100vw;
@@ -34,7 +33,7 @@ body {
     position: relative;
     color: white;
     background: linear-gradient(to right, #142a63 50%, #c40000 50%);
-    box-shadow: 0 50px 120px rgba(0,0,0,0.7), inset 0 0  40px rgba(0,0,0,0.4);      
+    box-shadow: 0 50px 120px rgba(0,0,0,0.7), inset 0 0 40px rgba(0,0,0,0.4);      
 }
 
 /* Vertical light -> dark overlay */
@@ -101,7 +100,6 @@ nav{
     text-decoration: none;
     opacity: 0.7;
     transition: 0.2s ease;
-
 }
 
 .social a:hover{
@@ -112,26 +110,28 @@ nav{
 /* Hero */
 .hero{
     height: 100%;
+    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .spidey{
     position: absolute;
-    left: 46%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* Responsive Sizing */
     height: clamp(350px, 85vh, 750px);
+    width: auto;
     z-index: 3;
     filter: drop-shadow(0 40px 50px rgba(0,0,0,0.6));
     transition: 0.7s ease;
 }
 
 .spidey:hover{
-    transform: translate(50%,-270%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.2);
 }
 
 /* Text */
@@ -185,7 +185,6 @@ nav{
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-
 /* Info Cards */
 .info-cards{
     position: absolute;
@@ -230,4 +229,355 @@ nav{
 .info-card:hover{
     transform: translateY(-8px);
     box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    nav {
+        padding: 25px 40px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    .menu {
+        gap: 12px;
+        font-size: 12px;
+    }
+    
+    .menu i {
+        font-size: 12px;
+    }
+    
+    .divider {
+        height: 12px;
+    }
+    
+    .social {
+        left: 30px;
+        gap: 20px;
+    }
+    
+    .social a {
+        font-size: 18px;
+    }
+    
+    .spidey {
+        height: clamp(280px, 60vh, 500px);
+    }
+    
+    .spidey:hover {
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+    
+    .text h1 {
+        font-size: clamp(40px, 10vw, 80px);
+        letter-spacing: -2px;
+    }
+    
+    .info-cards {
+        left: 40px;
+        right: 40px;
+        gap: 25px;
+        bottom: 25px;
+    }
+    
+    .info-card {
+        padding: 8px 14px;
+        gap: 15px;
+    }
+    
+    .info-number {
+        font-size: 28px;
+    }
+    
+    .info-text h4 {
+        font-size: 14px;
+    }
+    
+    .info-text p {
+        font-size: 10px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .logo img {
+        height: 32px;
+    }
+    
+    .menu {
+        gap: 8px;
+        font-size: 10px;
+    }
+    
+    .menu i {
+        font-size: 10px;
+    }
+    
+    .divider {
+        height: 10px;
+    }
+    
+    .social {
+        left: 15px;
+        gap: 15px;
+    }
+    
+    .social a {
+        font-size: 16px;
+    }
+    
+    .social a:hover {
+        transform: translateY(-2px) scale(1.2);
+    }
+    
+    .spidey {
+        height: clamp(220px, 45vh, 350px);
+    }
+    
+    .spidey:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .text {
+        margin-top: 60px;
+    }
+    
+    .text h1 {
+        font-size: clamp(32px, 12vw, 48px);
+        letter-spacing: -1px;
+        line-height: 1.1;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .carousel-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 12px;
+    }
+    
+    .carousel-arrow.left {
+        left: 5px;
+    }
+    
+    .carousel-arrow.right {
+        right: 5px;
+    }
+    
+    .info-cards {
+        flex-direction: column;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        gap: 12px;
+    }
+    
+    .info-card {
+        padding: 10px 15px;
+        gap: 15px;
+        backdrop-filter: blur(4px);
+    }
+    
+    .info-number {
+        font-size: 26px;
+        min-width: 45px;
+    }
+    
+    .info-text h4 {
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+    
+    .info-text p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+    
+    .info-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* Small Mobile (375px and below) */
+@media (max-width: 375px) {
+    nav {
+        padding: 12px 15px;
+    }
+    
+    .logo img {
+        height: 28px;
+    }
+    
+    .menu {
+        gap: 6px;
+        font-size: 9px;
+    }
+    
+    .menu i {
+        font-size: 9px;
+    }
+    
+    .social {
+        left: 12px;
+        gap: 12px;
+    }
+    
+    .social a {
+        font-size: 14px;
+    }
+    
+    .spidey {
+        height: clamp(180px, 40vh, 280px);
+    }
+    
+    .text h1 {
+        font-size: clamp(28px, 10vw, 36px);
+    }
+    
+    .carousel-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
+    }
+    
+    .info-cards {
+        gap: 10px;
+        bottom: 15px;
+    }
+    
+    .info-card {
+        padding: 8px 12px;
+        gap: 12px;
+    }
+    
+    .info-number {
+        font-size: 22px;
+        min-width: 35px;
+    }
+    
+    .info-text h4 {
+        font-size: 11px;
+    }
+    
+    .info-text p {
+        font-size: 9px;
+    }
+}
+
+/* Landscape Mode for Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .card {
+        overflow-y: auto;
+    }
+    
+    nav {
+        padding: 12px 25px;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .social {
+        left: 15px;
+        gap: 12px;
+    }
+    
+    .social a {
+        font-size: 16px;
+    }
+    
+    .spidey {
+        height: clamp(180px, 50vh, 300px);
+    }
+    
+    .spidey:hover {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    
+    .text h1 {
+        font-size: clamp(28px, 8vw, 48px);
+        margin-top: 40px;
+    }
+    
+    .info-cards {
+        flex-direction: row;
+        bottom: 15px;
+        left: 20px;
+        right: 20px;
+        gap: 15px;
+    }
+    
+    .info-card {
+        padding: 6px 10px;
+    }
+    
+    .info-number {
+        font-size: 20px;
+    }
+    
+    .info-text h4 {
+        font-size: 10px;
+    }
+    
+    .info-text p {
+        font-size: 8px;
+        display: none;
+    }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+    .spidey:hover {
+        transform: translate(-50%, -50%);
+    }
+    
+    .info-card:hover {
+        transform: none;
+    }
+    
+    .carousel-arrow:active {
+        transform: translateY(-50%) scale(0.95);
+    }
+    
+    .info-card:active {
+        transform: translateY(-3px);
+    }
+}
+
+/* iPad Pro and Large Tablets (1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .spidey {
+        height: clamp(300px, 70vh, 600px);
+    }
+    
+    .text h1 {
+        font-size: clamp(56px, 7vw, 90px);
+    }
+    
+    .info-cards {
+        left: 50px;
+        right: 50px;
+        gap: 30px;
+    }
+}
+
+/* Fix for very tall screens */
+@media (min-height: 900px) {
+    .spidey {
+        height: clamp(400px, 70vh, 700px);
+    }
+    
+    .info-cards {
+        bottom: 50px;
+    }
 }
