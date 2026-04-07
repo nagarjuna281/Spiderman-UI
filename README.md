@@ -33,7 +33,7 @@ This project was created by following a tutorial and extended with custom stylin
 ---
 ## 🌐 Deployment
 This project is deployed using **GitHub Pages**.  
-Visit: [`https://nagarjuna281.github.io/Spiderman-UI/` ](https://nagarjuna281.github.io/Spiderman-UI/)
+Visit: https://nagarjuna281.github.io/Spiderman-UI/
 
 ---
 
